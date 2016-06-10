@@ -1,0 +1,100 @@
+/* common styles */
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Lato", sans-serif;
+	color: #030d2d;
+	font-weight: 300;
+}
+
+body {
+	background: #d6d8e0;
+	margin:0;
+}
+
+/* various text styles */
+.text-thin {
+	font-weight: 100;
+	max-width: 100%;
+}
+
+.text-grey {
+	color: #bcbbbb;
+}
+
+.text-large {
+	font-weight: 100;
+	font-size: 50px;
+	max-width: 100%;
+}
+
+.search-box {
+	padding:10px;
+	width:410px;
+	z-index:9;
+	position:fixed;
+}
+
+@media (max-width:500px) {
+	.divtop{
+		width:100%;
+	}
+	.search-box {
+		width:100%;
+	}
+}
+
+.divtop {
+	height:100%;
+	overflow-y: auto;
+	top:0;
+	right:0;
+	left:0;
+	bottom: 0;
+	position:fixed;
+}
+
+.map {
+	height: 100%;
+}
+
+.mapDiv {
+	position:fixed;
+	height:100vh;
+	width:100vw;
+}
+
+/* Card styles: background & links */
+.btn-card-bg {
+	background: rgb(255, 204, 102);
+	color: #574500;
+	border: none;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	width: 100%;
+}
+
+.btn-card-bg:hover, .btn-card-bg:focus {
+ 	background: rgb(255, 255, 204);
+}
+
+.btn-card-bg:active {
+	background: rgb(255, 255, 204);
+}
+
+.card-back-ground {
+	background: rgb(255, 255, 204);
+}
+
+.toggle.ios, .toggle-on.ios,
+.toggle-off.ios {
+	border-radius: 20px;
+}
+
+.toggle.ios
+.toggle-handle {
+	border-radius: 20px;
+}

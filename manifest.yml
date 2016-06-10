@@ -1,0 +1,4 @@
+---
+applications:  
+- name: smiley-plant
+  path: public

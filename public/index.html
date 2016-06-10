@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Kranthi Kiran"/>
+    <title>Kranthi's Smiley Plant App</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+	<body>
+		<section>
+			<div class="container">
+				<!-- Header with a logo & heading-->
+				<header>
+				<div class="row text-center">
+					<div class="col-md-12 text-right text-uppercase">
+						<h1 class="text-thin text-large">Smiley Plant</h1>
+						<h6>Water your plants</h6>
+					</div>
+				</div>
+				</header>
+				<aside>
+					<div class="row text-top">
+						<div class="col-md-12">
+							<hr/>
+						</div>
+					</div>					
+				</aside>
+				<section>
+			    	<div class="row text-center">
+				      	<div class="col-md-12">
+				      		<h3 class="text-black">Click to water your plants</h3>			          	
+							<input type="checkbox" id="chkBoxWaterSwitch" name="chkBoxWaterSwitch" data-toggle="toggle" data-style="ios" data-onstyle="success" data-offstyle="info"/>
+				        </div>				        
+			    	</div>
+				</section>
+
+				<!-- Content in the middle-->
+				<main>
+					<article>
+					<div class="row text-center wrapper center-block">
+					  <div class="col-md-12">
+					      <img src="./images/plantwatering.jpg" class="img-responsive center-block img-circle" alt="Personal photo"/>
+					  </div>
+					</div>
+					</article>
+					<!-- Footer-->
+					<footer>
+					    <div>
+							<div id="statusModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="statusModal">
+								<div class="modal-dialog modal-sm">
+									<div class="modal-content">
+										<div id="modalContent" class="alert" role='alert'>
+											---
+										</div>
+									</div>
+								</div>
+							</div>
+			      		</div>	      					
+					</footer>
+				</main>
+			</div>
+		</section>
+		<script>
+			var hrefVal = '';
+			var bootStrapCss = function() {
+				var l = document.createElement('link');
+				l.rel = 'stylesheet';
+				l.href = 'css/bootstrap.min.css';
+				var h = document.getElementsByTagName('head')[0];
+				h.parentNode.insertBefore(l, h);
+			};
+			var bootStrapThemeCss = function() {
+				var l = document.createElement('link');
+				l.rel = 'stylesheet';
+				l.href = 'css/bootstrap-theme.min.css';
+				var h = document.getElementsByTagName('head')[0];
+				h.parentNode.insertBefore(l, h);
+			};
+			var bootStrapToggleCss = function() {
+				var l = document.createElement('link');
+				l.rel = 'stylesheet';
+				l.href = 'css/bootstrap-toggle.min.css';
+				var h = document.getElementsByTagName('head')[0];
+				h.parentNode.insertBefore(l, h);
+			};
+			var googleFont = function() {
+				var l = document.createElement('link'); l.rel = 'stylesheet';
+				l.href = 'https://fonts.googleapis.com/css?family=Lato:300';
+				var h = document.getElementsByTagName('head')[0]; 
+				h.parentNode.insertBefore(l, h);
+			};
+			var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+			  webkitRequestAnimationFrame || msRequestAnimationFrame;
+			if (raf) {
+				raf(bootStrapCss);
+				raf(bootStrapThemeCss);
+				raf(bootStrapToggleCss);
+				raf(googleFont);
+			}
+			else{
+				window.addEventListener('load', bootStrapCss);
+				window.addEventListener('load', bootStrapThemeCss);
+				window.addEventListener('load', bootStrapToggleCss);
+			}
+		</script>
+
+		<script src="js/lib/jquery-2.1.4.min.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/bootstrap-toggle.min.js"></script>
+		<script src="js/device.api.js" async="async"></script>
+		<script src="js/main.js" async="async"></script>
+	</body>
+</html>
